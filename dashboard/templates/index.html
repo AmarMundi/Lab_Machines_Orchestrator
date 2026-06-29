@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>NemoClaw — Sandbox Loop monitoring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #0e0e12;
+    --panel: #161620;
+    --panel2: #1d1d2a;
+    --text: #e4e3e0;
+    --muted: #8a8888;
+    --accent: #7f77dd;
+    --accent2: #534ab7;
+    --info: #4a8aae;
+    --warn: #d6a04a;
+    --alert: #c75252;
+    --ok: #5baa72;
+    --border: #2c2c3c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    overflow: hidden;
+  }
+  header {
+    padding: 12px 20px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px;
+  }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  header .sub { color: var(--muted); font-size: 12px; }
+  header .right { margin-left: auto; display: flex; gap: 14px; align-items: center; }
+  .pill {
+    padding: 3px 10px; border-radius: 10px; font-size: 11px;
+    background: #2a2a3a; color: var(--muted);
+  }
+  .pill.ok    { background: rgba(91,170,114,0.15); color: var(--ok); }
+  .pill.warn  { background: rgba(214,160,74,0.15); color: var(--warn); }
+  .pill.alert { background: rgba(199,82,82,0.15); color: var(--alert); }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-template-rows: 1fr;
+    height: calc(100vh - 49px);
+  }
+  .left  { padding: 16px; overflow-y: auto; }
+  .right { background: var(--panel); border-left: 1px solid var(--border); display: flex; flex-direction: column; }
+
+  /* ---- asset grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .tile {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex; flex-direction: column; gap: 8px;
+    min-height: 132px;
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .tile.flash-info  { border-color: var(--info); }
+  .tile.flash-warn  { border-color: var(--warn); box-shadow: 0 0 0 2px rgba(214,160,74,0.15); }
+  .tile.flash-alert { border-color: var(--alert); box-shadow: 0 0 0 2px rgba(199,82,82,0.18); }
+  .tile-head { display: flex; align-items: center; gap: 10px; }
+  .tile-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); flex-shrink: 0; }
+  .tile-dot.warn  { background: var(--warn); }
+  .tile-dot.alert { background: var(--alert); }
+  .tile-dot.idle  { background: var(--muted); }
+  .tile-title { font-weight: 600; font-size: 14px; }
+  .tile-asset-id { color: var(--muted); font-size: 11px; font-family: ui-monospace, "SF Mono", Menlo, monospace; margin-left: auto; }
+  .tile-event { font-size: 12px; color: var(--text); }
+  .tile-event-name { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; color: var(--accent); }
+  .tile-ts { color: var(--muted); font-size: 11px; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .tile-payload {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 10px;
+    color: var(--muted); background: var(--panel2); padding: 6px 8px; border-radius: 4px;
+    max-height: 60px; overflow: hidden; white-space: pre-wrap; line-height: 1.4;
+  }
+
+  /* ---- video preview ---- */
+  .video-box {
+    margin-top: 14px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .video-box h3 { margin: 0 0 8px 0; font-size: 13px; font-weight: 600; }
+  .video-box img { width: 100%; max-width: 480px; border-radius: 6px; background: #000; }
+  .video-box .meta { color: var(--muted); font-size: 11px; margin-top: 6px; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+
+  /* ---- right panel: alerts + event log ---- */
+  .right h3 { margin: 0; padding: 12px 16px; font-size: 13px; font-weight: 600; border-bottom: 1px solid var(--border); }
+  .alerts-list, .events-list {
+    flex: 1; overflow-y: auto; padding: 0;
+    list-style: none; margin: 0;
+  }
+  .alerts-list { max-height: 50%; border-bottom: 1px solid var(--border); }
+  .alert-item, .event-item {
+    padding: 10px 16px; border-bottom: 1px solid var(--border);
+    font-size: 12px; line-height: 1.5;
+  }
+  .alert-item .top, .event-item .top {
+    display: flex; gap: 8px; align-items: center;
+  }
+  .alert-item .ts, .event-item .ts {
+    color: var(--muted); font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 10px; margin-left: auto;
+  }
+  .alert-item .name {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px;
+    color: var(--accent);
+  }
+  .alert-item.warn  .name { color: var(--warn); }
+  .alert-item.alert .name { color: var(--alert); }
+  .alert-item .summary {
+    color: var(--text); margin-top: 4px;
+    background: var(--panel2); padding: 6px 8px; border-radius: 4px;
+    font-style: italic; font-size: 11px;
+  }
+  .alert-item .asset { color: var(--muted); font-size: 11px; }
+  .event-item .name { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; color: var(--muted); }
+  .event-item.b .name { color: #d85a30; }
+  .empty { padding: 14px 16px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>NemoClaw — Sandbox Loop monitoring</h1>
+  <span class="sub">on-prem · single visual pane · two pipelines fused</span>
+  <div class="right">
+    <span class="pill" id="ws-pill">connecting…</span>
+    <span class="pill" id="event-count">0 events</span>
+    <span class="pill alert" id="alert-count">0 alerts</span>
+  </div>
+</header>
+
+<main>
+  <section class="left">
+
+    <!-- 6 asset tiles, in a 3×2 grid following the layout from the SoW diagram -->
+    <div class="grid" id="tile-grid">
+      {% for asset_id, meta in assets.items() %}
+      <div class="tile" id="tile-{{ asset_id }}" data-asset="{{ asset_id }}">
+        <div class="tile-head">
+          <span class="tile-dot idle" id="dot-{{ asset_id }}"></span>
+          <span class="tile-title">{{ meta.label }}</span>
+          <span class="tile-asset-id">{{ asset_id }}</span>
+        </div>
+        <div class="tile-event">
+          <div class="tile-event-name" id="ev-name-{{ asset_id }}">—</div>
+          <div class="tile-ts" id="ev-ts-{{ asset_id }}"></div>
+        </div>
+        <div class="tile-payload" id="ev-payload-{{ asset_id }}"></div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- video preview from Pipeline B -->
+    <div class="video-box">
+      <h3>Pipeline B preview · live annotated frame</h3>
+      <img id="video-frame" src="" alt="video preview" />
+      <div class="meta" id="video-meta">awaiting first frame…</div>
+    </div>
+  </section>
+
+  <aside class="right">
+    <h3>Alerts (NemoClaw orchestrator)</h3>
+    <ul class="alerts-list" id="alerts-list">
+      <li class="empty">No alerts yet.</li>
+    </ul>
+    <h3>Live event stream (last 50)</h3>
+    <ul class="events-list" id="events-list">
+      <li class="empty">No events yet.</li>
+    </ul>
+  </aside>
+</main>
+
+<script>
+const wsPill = document.getElementById('ws-pill');
+const eventCountEl = document.getElementById('event-count');
+const alertCountEl = document.getElementById('alert-count');
+let eventCount = 0, alertCount = 0;
+
+const eventsList = document.getElementById('events-list');
+const alertsList = document.getElementById('alerts-list');
+
+function tsShort(iso) {
+  if (!iso) return '';
+  // Show HH:MM:SS only — keep tile compact
+  return iso.split('T')[1]?.slice(0, 8) || iso;
+}
+
+function severityClass(sev) { return sev || 'info'; }
+
+function applyEventToTile(ev) {
+  const tile = document.getElementById(`tile-${ev.asset_id}`);
+  if (!tile) return;
+  // Reset flash classes, then re-apply
+  tile.classList.remove('flash-info', 'flash-warn', 'flash-alert');
+  tile.classList.add(`flash-${severityClass(ev.severity)}`);
+  // Color the dot
+  const dot = document.getElementById(`dot-${ev.asset_id}`);
+  if (dot) {
+    dot.classList.remove('idle', 'warn', 'alert');
+    if (ev.severity === 'alert') dot.classList.add('alert');
+    else if (ev.severity === 'warn') dot.classList.add('warn');
+  }
+  document.getElementById(`ev-name-${ev.asset_id}`).textContent = ev.event_name;
+  document.getElementById(`ev-ts-${ev.asset_id}`).textContent = ev.ts || '';
+  const payloadEl = document.getElementById(`ev-payload-${ev.asset_id}`);
+  payloadEl.textContent = JSON.stringify(ev.payload || {}, null, 1);
+}
+
+function appendEvent(ev) {
+  // remove "empty" placeholder
+  const empty = eventsList.querySelector('.empty');
+  if (empty) empty.remove();
+
+  const li = document.createElement('li');
+  li.className = 'event-item' + (ev.pipeline === 'B' ? ' b' : '');
+  li.innerHTML = `
+    <div class="top">
+      <span class="name">${ev.event_name}</span>
+      <span class="ts">${tsShort(ev.ts)}</span>
+    </div>
+    <div class="asset" style="color:#8a8888;font-size:11px;">${ev.asset_id} · pipeline ${ev.pipeline}</div>
+  `;
+  eventsList.prepend(li);
+  // Keep at most 50
+  while (eventsList.children.length > 50) eventsList.removeChild(eventsList.lastChild);
+
+  eventCount++;
+  eventCountEl.textContent = `${eventCount} events`;
+}
+
+function appendAlert(ev) {
+  const empty = alertsList.querySelector('.empty');
+  if (empty) empty.remove();
+
+  const sev = severityClass(ev.severity);
+  const li = document.createElement('li');
+  li.className = 'alert-item ' + sev;
+  const summary = ev.payload && ev.payload.summary ? ev.payload.summary : '';
+  li.innerHTML = `
+    <div class="top">
+      <span class="name">${ev.event_name}</span>
+      <span class="ts">${tsShort(ev.ts)}</span>
+    </div>
+    <div class="asset">${ev.asset_id}</div>
+    ${summary ? `<div class="summary">${escapeHtml(summary)}</div>` : ''}
+  `;
+  alertsList.prepend(li);
+  while (alertsList.children.length > 30) alertsList.removeChild(alertsList.lastChild);
+
+  alertCount++;
+  alertCountEl.textContent = `${alertCount} alerts`;
+
+  // Also flash the affected tile
+  applyEventToTile(ev);
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ---- WebSocket connection ----
+let ws;
+function connect() {
+  const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  ws = new WebSocket(`${proto}//${window.location.host}/ws`);
+  ws.onopen = () => {
+    wsPill.textContent = 'live';
+    wsPill.className = 'pill ok';
+  };
+  ws.onclose = () => {
+    wsPill.textContent = 'disconnected';
+    wsPill.className = 'pill alert';
+    setTimeout(connect, 2000);
+  };
+  ws.onerror = () => { /* will retry on close */ };
+  ws.onmessage = (m) => {
+    try {
+      const msg = JSON.parse(m.data);
+      if (msg.type === 'event') {
+        applyEventToTile(msg.data);
+        appendEvent(msg.data);
+      } else if (msg.type === 'alert') {
+        appendAlert(msg.data);
+      }
+    } catch (e) { console.error(e); }
+  };
+}
+connect();
+
+// ---- initial state load ----
+fetch('/api/state').then(r => r.json()).then(state => {
+  Object.values(state).forEach(s => {
+    if (!s.last_event || s.last_event === '—') return;
+    let payload = {};
+    try { payload = JSON.parse(s.last_payload || '{}'); } catch {}
+    applyEventToTile({
+      asset_id: s.asset_id,
+      event_name: s.last_event,
+      ts: s.last_ts,
+      severity: s.last_severity,
+      payload: payload,
+    });
+  });
+});
+
+// ---- recent alerts on load ----
+fetch('/api/alerts/recent?n=15').then(r => r.json()).then(list => {
+  // append in chronological so most recent ends up on top
+  list.reverse().forEach(appendAlert);
+});
+
+// ---- video frame poller ----
+async function pollVideoFrame() {
+  try {
+    const r = await fetch('/api/video-frame');
+    const j = await r.json();
+    if (j.frame_b64) {
+      document.getElementById('video-frame').src = `data:image/jpeg;base64,${j.frame_b64}`;
+      document.getElementById('video-meta').textContent = j.ts ? `last frame: ${j.ts}` : '';
+    }
+  } catch (e) {}
+  setTimeout(pollVideoFrame, 1000);
+}
+pollVideoFrame();
+</script>
+
+</body>
+</html>
