@@ -1,0 +1,314 @@
+[2026-04-24 08:01:06.304]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00400-A operator=auto
+[2026-04-24 08:01:06.583]  INFO  PLATE_LOAD   plate=P-900 barcode=PB0000000900 lane=2
+[2026-04-24 08:01:08.520]  INFO  RACK_PRESENT rack=R-2000 barcode=RB0000002000 lane=2
+[2026-04-24 08:01:08.656]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:01:25.874]  INFO  STEP_END     step=Aspirate duration_ms=17218
+[2026-04-24 08:01:26.061]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:01:40.129]  INFO  STEP_END     step=Dispense duration_ms=14068
+[2026-04-24 08:01:40.354]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:01:59.008]  INFO  STEP_END     step=Mix duration_ms=18653
+[2026-04-24 08:01:59.205]  INFO  RUN_END      run_id=RUN-00400-A status=OK
+[2026-04-24 08:01:59.424]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00400-A
+[2026-04-24 08:05:49.098]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00401-A operator=auto
+[2026-04-24 08:05:49.293]  INFO  PLATE_LOAD   plate=P-901 barcode=PB0000000901 lane=2
+[2026-04-24 08:05:51.056]  INFO  RACK_PRESENT rack=R-2001 barcode=RB0000002001 lane=2
+[2026-04-24 08:05:51.432]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:06:09.339]  INFO  STEP_END     step=Aspirate duration_ms=17906
+[2026-04-24 08:06:09.710]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:06:24.547]  INFO  STEP_END     step=Dispense duration_ms=14836
+[2026-04-24 08:06:24.812]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:06:44.766]  INFO  STEP_END     step=Mix duration_ms=19954
+[2026-04-24 08:06:44.894]  INFO  RUN_END      run_id=RUN-00401-A status=OK
+[2026-04-24 08:06:45.136]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00401-A
+[2026-04-24 08:10:58.785]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00402-A operator=auto
+[2026-04-24 08:10:59.071]  INFO  PLATE_LOAD   plate=P-902 barcode=PB0000000902 lane=2
+[2026-04-24 08:11:00.411]  INFO  RACK_PRESENT rack=R-2002 barcode=RB0000002002 lane=2
+[2026-04-24 08:11:00.566]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:11:17.063]  INFO  STEP_END     step=Aspirate duration_ms=16497
+[2026-04-24 08:11:17.260]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:11:31.333]  INFO  STEP_END     step=Dispense duration_ms=14072
+[2026-04-24 08:11:31.504]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:11:51.191]  INFO  STEP_END     step=Mix duration_ms=19687
+[2026-04-24 08:11:51.362]  INFO  RUN_END      run_id=RUN-00402-A status=OK
+[2026-04-24 08:11:51.630]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00402-A
+[2026-04-24 08:14:21.057]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00403-A operator=auto
+[2026-04-24 08:14:21.197]  INFO  PLATE_LOAD   plate=P-903 barcode=PB0000000903 lane=2
+[2026-04-24 08:14:22.635]  INFO  RACK_PRESENT rack=R-2003 barcode=RB0000002003 lane=2
+[2026-04-24 08:14:23.013]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:14:40.420]  INFO  STEP_END     step=Aspirate duration_ms=17407
+[2026-04-24 08:14:40.790]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:14:53.806]  INFO  STEP_END     step=Dispense duration_ms=13015
+[2026-04-24 08:14:54.189]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:15:13.386]  INFO  STEP_END     step=Mix duration_ms=19197
+[2026-04-24 08:15:13.655]  INFO  RUN_END      run_id=RUN-00403-A status=OK
+[2026-04-24 08:15:13.831]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00403-A
+[2026-04-24 08:18:16.271]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00404-A operator=auto
+[2026-04-24 08:18:16.456]  INFO  PLATE_LOAD   plate=P-904 barcode=PB0000000904 lane=2
+[2026-04-24 08:18:18.238]  INFO  RACK_PRESENT rack=R-2004 barcode=RB0000002004 lane=2
+[2026-04-24 08:18:18.548]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:18:36.153]  INFO  STEP_END     step=Aspirate duration_ms=17604
+[2026-04-24 08:18:36.380]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:18:49.914]  INFO  STEP_END     step=Dispense duration_ms=13533
+[2026-04-24 08:18:50.069]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:19:09.599]  INFO  STEP_END     step=Mix duration_ms=19530
+[2026-04-24 08:19:09.708]  INFO  RUN_END      run_id=RUN-00404-A status=OK
+[2026-04-24 08:19:09.978]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00404-A
+[2026-04-24 08:23:18.636]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00405-A operator=auto
+[2026-04-24 08:23:18.849]  INFO  PLATE_LOAD   plate=P-905 barcode=PB0000000905 lane=2
+[2026-04-24 08:23:20.525]  INFO  RACK_PRESENT rack=R-2005 barcode=RB0000002005 lane=2
+[2026-04-24 08:23:20.886]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:23:41.252]  WARN  STEP_SLOW    step=Aspirate elapsed_ms=20365 expected_ms<=18000
+[2026-04-24 08:23:46.252]  INFO  STEP_END     step=Aspirate duration_ms=25365
+[2026-04-24 08:23:46.438]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:24:04.732]  WARN  STEP_SLOW    step=Dispense elapsed_ms=18294 expected_ms<=15000
+[2026-04-24 08:24:09.732]  INFO  STEP_END     step=Dispense duration_ms=23294
+[2026-04-24 08:24:09.977]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:24:34.554]  WARN  STEP_SLOW    step=Mix elapsed_ms=24577 expected_ms<=22000
+[2026-04-24 08:24:39.554]  INFO  STEP_END     step=Mix duration_ms=29577
+[2026-04-24 08:24:39.816]  INFO  RUN_END      run_id=RUN-00405-A status=OK_DELAYED
+[2026-04-24 08:24:40.051]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00405-A
+[2026-04-24 08:27:33.893]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00406-A operator=auto
+[2026-04-24 08:27:33.994]  INFO  PLATE_LOAD   plate=P-906 barcode=PB0000000906 lane=2
+[2026-04-24 08:27:35.936]  INFO  RACK_PRESENT rack=R-2006 barcode=RB0000002006 lane=2
+[2026-04-24 08:27:36.188]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:27:53.695]  INFO  STEP_END     step=Aspirate duration_ms=17506
+[2026-04-24 08:27:54.009]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:28:08.086]  INFO  STEP_END     step=Dispense duration_ms=14076
+[2026-04-24 08:28:08.465]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:28:29.664]  INFO  STEP_END     step=Mix duration_ms=21199
+[2026-04-24 08:28:29.820]  INFO  RUN_END      run_id=RUN-00406-A status=OK
+[2026-04-24 08:28:30.094]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00406-A
+[2026-04-24 08:31:14.729]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00407-A operator=auto
+[2026-04-24 08:31:14.925]  INFO  PLATE_LOAD   plate=P-907 barcode=PB0000000907 lane=2
+[2026-04-24 08:31:16.321]  INFO  RACK_PRESENT rack=R-2007 barcode=RB0000002007 lane=2
+[2026-04-24 08:31:16.522]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:31:32.674]  INFO  STEP_END     step=Aspirate duration_ms=16151
+[2026-04-24 08:31:32.898]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:31:46.102]  INFO  STEP_END     step=Dispense duration_ms=13203
+[2026-04-24 08:31:46.356]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:32:07.757]  INFO  STEP_END     step=Mix duration_ms=21401
+[2026-04-24 08:32:08.010]  INFO  RUN_END      run_id=RUN-00407-A status=OK
+[2026-04-24 08:32:08.190]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00407-A
+[2026-04-24 08:36:28.093]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00408-A operator=auto
+[2026-04-24 08:36:28.218]  INFO  PLATE_LOAD   plate=P-908 barcode=PB0000000908 lane=2
+[2026-04-24 08:36:30.051]  INFO  RACK_PRESENT rack=R-2008 barcode=RB0000002008 lane=2
+[2026-04-24 08:36:30.699]  WARN  BARCODE_MISMATCH expected=RB0000002008 read=RB0000047301
+[2026-04-24 08:36:30.730]  ERROR RUN_ABORT    run_id=RUN-00408-A reason=BARCODE_MISMATCH
+[2026-04-24 08:36:30.868]  INFO  REST_OUT     POST /amr/notify status=PROCESS_FAIL run_id=RUN-00408-A
+[2026-04-24 08:38:35.315]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00409-A operator=auto
+[2026-04-24 08:38:35.571]  INFO  PLATE_LOAD   plate=P-909 barcode=PB0000000909 lane=2
+[2026-04-24 08:38:37.531]  INFO  RACK_PRESENT rack=R-2009 barcode=RB0000002009 lane=2
+[2026-04-24 08:38:37.681]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:38:55.576]  INFO  STEP_END     step=Aspirate duration_ms=17895
+[2026-04-24 08:38:55.782]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:39:10.033]  INFO  STEP_END     step=Dispense duration_ms=14251
+[2026-04-24 08:39:10.268]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:39:30.910]  INFO  STEP_END     step=Mix duration_ms=20641
+[2026-04-24 08:39:31.050]  INFO  RUN_END      run_id=RUN-00409-A status=OK
+[2026-04-24 08:39:31.261]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00409-A
+[2026-04-24 08:43:21.340]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00410-A operator=auto
+[2026-04-24 08:43:21.565]  INFO  PLATE_LOAD   plate=P-910 barcode=PB0000000910 lane=2
+[2026-04-24 08:43:23.534]  INFO  RACK_PRESENT rack=R-2010 barcode=RB0000002010 lane=2
+[2026-04-24 08:43:23.874]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:43:40.570]  INFO  STEP_END     step=Aspirate duration_ms=16695
+[2026-04-24 08:43:40.840]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:43:54.482]  INFO  STEP_END     step=Dispense duration_ms=13642
+[2026-04-24 08:43:54.635]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:44:16.066]  INFO  STEP_END     step=Mix duration_ms=21430
+[2026-04-24 08:44:16.250]  INFO  RUN_END      run_id=RUN-00410-A status=OK
+[2026-04-24 08:44:16.505]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00410-A
+[2026-04-24 08:47:23.956]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00411-A operator=auto
+[2026-04-24 08:47:24.234]  INFO  PLATE_LOAD   plate=P-911 barcode=PB0000000911 lane=2
+[2026-04-24 08:47:25.472]  INFO  RACK_PRESENT rack=R-2011 barcode=RB0000002011 lane=2
+[2026-04-24 08:47:25.768]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:47:42.236]  INFO  STEP_END     step=Aspirate duration_ms=16467
+[2026-04-24 08:47:42.546]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:47:55.633]  INFO  STEP_END     step=Dispense duration_ms=13087
+[2026-04-24 08:47:55.975]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:48:16.796]  INFO  STEP_END     step=Mix duration_ms=20820
+[2026-04-24 08:48:16.993]  INFO  RUN_END      run_id=RUN-00411-A status=OK
+[2026-04-24 08:48:17.241]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00411-A
+[2026-04-24 08:50:54.472]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00412-A operator=auto
+[2026-04-24 08:50:54.688]  INFO  PLATE_LOAD   plate=P-912 barcode=PB0000000912 lane=2
+[2026-04-24 08:50:56.533]  INFO  RACK_PRESENT rack=R-2012 barcode=RB0000002012 lane=2
+[2026-04-24 08:50:56.734]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:51:19.731]  WARN  STEP_SLOW    step=Aspirate elapsed_ms=22996 expected_ms<=18000
+[2026-04-24 08:51:24.731]  INFO  STEP_END     step=Aspirate duration_ms=27996
+[2026-04-24 08:51:25.078]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:51:40.611]  WARN  STEP_SLOW    step=Dispense elapsed_ms=15533 expected_ms<=15000
+[2026-04-24 08:51:45.611]  INFO  STEP_END     step=Dispense duration_ms=20533
+[2026-04-24 08:51:45.906]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:52:10.766]  WARN  STEP_SLOW    step=Mix elapsed_ms=24859 expected_ms<=22000
+[2026-04-24 08:52:15.766]  INFO  STEP_END     step=Mix duration_ms=29859
+[2026-04-24 08:52:16.013]  INFO  RUN_END      run_id=RUN-00412-A status=OK_DELAYED
+[2026-04-24 08:52:16.238]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00412-A
+[2026-04-24 08:54:56.832]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00413-A operator=auto
+[2026-04-24 08:54:56.991]  INFO  PLATE_LOAD   plate=P-913 barcode=PB0000000913 lane=2
+[2026-04-24 08:54:58.463]  INFO  RACK_PRESENT rack=R-2013 barcode=RB0000002013 lane=2
+[2026-04-24 08:54:58.850]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:55:15.506]  INFO  STEP_END     step=Aspirate duration_ms=16656
+[2026-04-24 08:55:15.719]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 08:55:30.014]  INFO  STEP_END     step=Dispense duration_ms=14295
+[2026-04-24 08:55:30.351]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 08:55:51.988]  INFO  STEP_END     step=Mix duration_ms=21637
+[2026-04-24 08:55:52.165]  INFO  RUN_END      run_id=RUN-00413-A status=OK
+[2026-04-24 08:55:52.419]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00413-A
+[2026-04-24 08:59:31.755]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00414-A operator=auto
+[2026-04-24 08:59:31.887]  INFO  PLATE_LOAD   plate=P-914 barcode=PB0000000914 lane=2
+[2026-04-24 08:59:33.628]  INFO  RACK_PRESENT rack=R-2014 barcode=RB0000002014 lane=2
+[2026-04-24 08:59:33.997]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 08:59:50.225]  INFO  STEP_END     step=Aspirate duration_ms=16227
+[2026-04-24 08:59:50.357]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:00:04.309]  INFO  STEP_END     step=Dispense duration_ms=13952
+[2026-04-24 09:00:04.594]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:00:24.647]  INFO  STEP_END     step=Mix duration_ms=20052
+[2026-04-24 09:00:24.774]  INFO  RUN_END      run_id=RUN-00414-A status=OK
+[2026-04-24 09:00:25.039]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00414-A
+[2026-04-24 09:03:58.461]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00415-A operator=auto
+[2026-04-24 09:03:58.588]  INFO  PLATE_LOAD   plate=P-915 barcode=PB0000000915 lane=2
+[2026-04-24 09:03:59.938]  INFO  RACK_PRESENT rack=R-2015 barcode=RB0000002015 lane=2
+[2026-04-24 09:04:00.322]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:04:17.058]  INFO  STEP_END     step=Aspirate duration_ms=16735
+[2026-04-24 09:04:17.300]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:04:31.448]  INFO  STEP_END     step=Dispense duration_ms=14148
+[2026-04-24 09:08:20.444]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00416-A operator=auto
+[2026-04-24 09:08:20.699]  INFO  PLATE_LOAD   plate=P-916 barcode=PB0000000916 lane=2
+[2026-04-24 09:08:22.141]  INFO  RACK_PRESENT rack=R-2016 barcode=RB0000002016 lane=2
+[2026-04-24 09:08:22.380]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:08:38.811]  INFO  STEP_END     step=Aspirate duration_ms=16431
+[2026-04-24 09:08:39.173]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:08:52.401]  INFO  STEP_END     step=Dispense duration_ms=13227
+[2026-04-24 09:08:52.721]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:09:11.164]  INFO  STEP_END     step=Mix duration_ms=18443
+[2026-04-24 09:09:11.437]  INFO  RUN_END      run_id=RUN-00416-A status=OK
+[2026-04-24 09:09:11.711]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00416-A
+[2026-04-24 09:11:58.291]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00417-A operator=auto
+[2026-04-24 09:11:58.505]  INFO  PLATE_LOAD   plate=P-917 barcode=PB0000000917 lane=2
+[2026-04-24 09:12:00.186]  INFO  RACK_PRESENT rack=R-2017 barcode=RB0000002017 lane=2
+[2026-04-24 09:12:00.575]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:12:17.861]  INFO  STEP_END     step=Aspirate duration_ms=17285
+[2026-04-24 09:12:18.126]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:12:32.854]  INFO  STEP_END     step=Dispense duration_ms=14728
+[2026-04-24 09:12:33.115]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:12:51.719]  INFO  STEP_END     step=Mix duration_ms=18603
+[2026-04-24 09:12:51.836]  INFO  RUN_END      run_id=RUN-00417-A status=OK
+[2026-04-24 09:12:52.106]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00417-A
+[2026-04-24 09:16:56.960]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00418-A operator=auto
+[2026-04-24 09:16:57.231]  INFO  PLATE_LOAD   plate=P-918 barcode=PB0000000918 lane=2
+[2026-04-24 09:16:58.654]  INFO  RACK_PRESENT rack=R-2018 barcode=RB0000002018 lane=2
+[2026-04-24 09:16:58.939]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:17:14.975]  INFO  STEP_END     step=Aspirate duration_ms=16036
+[2026-04-24 09:17:15.233]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:17:28.594]  INFO  STEP_END     step=Dispense duration_ms=13360
+[2026-04-24 09:17:28.803]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:17:48.170]  INFO  STEP_END     step=Mix duration_ms=19366
+[2026-04-24 09:17:48.466]  INFO  RUN_END      run_id=RUN-00418-A status=OK
+[2026-04-24 09:17:48.740]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00418-A
+[2026-04-24 09:20:31.501]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00419-A operator=auto
+[2026-04-24 09:20:31.636]  INFO  PLATE_LOAD   plate=P-919 barcode=PB0000000919 lane=2
+[2026-04-24 09:20:32.674]  INFO  RACK_PRESENT rack=R-2019 barcode=RB0000002019 lane=2
+[2026-04-24 09:20:33.015]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:20:54.495]  WARN  STEP_SLOW    step=Aspirate elapsed_ms=21480 expected_ms<=18000
+[2026-04-24 09:20:59.495]  INFO  STEP_END     step=Aspirate duration_ms=26480
+[2026-04-24 09:20:59.666]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:21:18.460]  WARN  STEP_SLOW    step=Dispense elapsed_ms=18794 expected_ms<=15000
+[2026-04-24 09:21:23.460]  INFO  STEP_END     step=Dispense duration_ms=23794
+[2026-04-24 09:21:23.800]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:21:48.043]  WARN  STEP_SLOW    step=Mix elapsed_ms=24243 expected_ms<=22000
+[2026-04-24 09:21:53.043]  INFO  STEP_END     step=Mix duration_ms=29243
+[2026-04-24 09:21:53.144]  INFO  RUN_END      run_id=RUN-00419-A status=OK_DELAYED
+[2026-04-24 09:21:53.314]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00419-A
+[2026-04-24 09:25:47.020]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00420-A operator=auto
+[2026-04-24 09:25:47.131]  INFO  PLATE_LOAD   plate=P-920 barcode=PB0000000920 lane=2
+[2026-04-24 09:25:48.922]  INFO  RACK_PRESENT rack=R-2020 barcode=RB0000002020 lane=2
+[2026-04-24 09:25:49.043]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:26:05.674]  INFO  STEP_END     step=Aspirate duration_ms=16631
+[2026-04-24 09:26:05.932]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:26:19.963]  INFO  STEP_END     step=Dispense duration_ms=14030
+[2026-04-24 09:26:20.341]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:26:40.234]  INFO  STEP_END     step=Mix duration_ms=19893
+[2026-04-24 09:26:40.343]  INFO  RUN_END      run_id=RUN-00420-A status=OK
+[2026-04-24 09:26:40.541]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00420-A
+[2026-04-24 09:30:25.869]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00421-A operator=auto
+[2026-04-24 09:30:26.063]  INFO  PLATE_LOAD   plate=P-921 barcode=PB0000000921 lane=2
+[2026-04-24 09:30:27.435]  INFO  RACK_PRESENT rack=R-2021 barcode=RB0000002021 lane=2
+[2026-04-24 09:30:27.574]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:30:44.722]  INFO  STEP_END     step=Aspirate duration_ms=17147
+[2026-04-24 09:30:45.093]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:30:58.827]  INFO  STEP_END     step=Dispense duration_ms=13733
+[2026-04-24 09:30:59.087]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:31:19.685]  INFO  STEP_END     step=Mix duration_ms=20598
+[2026-04-24 09:31:19.848]  INFO  RUN_END      run_id=RUN-00421-A status=OK
+[2026-04-24 09:31:20.027]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00421-A
+[2026-04-24 09:34:36.610]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00422-A operator=auto
+[2026-04-24 09:34:36.751]  INFO  PLATE_LOAD   plate=P-922 barcode=PB0000000922 lane=2
+[2026-04-24 09:34:38.073]  INFO  RACK_PRESENT rack=R-2022 barcode=RB0000002022 lane=2
+[2026-04-24 09:34:38.928]  WARN  BARCODE_MISMATCH expected=RB0000002022 read=RB0000045353
+[2026-04-24 09:34:39.008]  ERROR RUN_ABORT    run_id=RUN-00422-A reason=BARCODE_MISMATCH
+[2026-04-24 09:34:39.174]  INFO  REST_OUT     POST /amr/notify status=PROCESS_FAIL run_id=RUN-00422-A
+[2026-04-24 09:38:33.802]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00423-A operator=auto
+[2026-04-24 09:38:34.085]  INFO  PLATE_LOAD   plate=P-923 barcode=PB0000000923 lane=2
+[2026-04-24 09:38:35.404]  INFO  RACK_PRESENT rack=R-2023 barcode=RB0000002023 lane=2
+[2026-04-24 09:38:35.680]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:38:53.631]  INFO  STEP_END     step=Aspirate duration_ms=17950
+[2026-04-24 09:38:53.797]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:39:08.318]  INFO  STEP_END     step=Dispense duration_ms=14521
+[2026-04-24 09:39:08.681]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:39:28.928]  INFO  STEP_END     step=Mix duration_ms=20246
+[2026-04-24 09:39:29.109]  INFO  RUN_END      run_id=RUN-00423-A status=OK
+[2026-04-24 09:39:29.320]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00423-A
+[2026-04-24 09:42:21.456]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00424-A operator=auto
+[2026-04-24 09:42:21.560]  INFO  PLATE_LOAD   plate=P-924 barcode=PB0000000924 lane=2
+[2026-04-24 09:42:22.929]  INFO  RACK_PRESENT rack=R-2024 barcode=RB0000002024 lane=2
+[2026-04-24 09:42:23.085]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:42:41.045]  INFO  STEP_END     step=Aspirate duration_ms=17959
+[2026-04-24 09:42:41.443]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:42:55.058]  INFO  STEP_END     step=Dispense duration_ms=13615
+[2026-04-24 09:42:55.171]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:43:15.559]  INFO  STEP_END     step=Mix duration_ms=20387
+[2026-04-24 09:43:15.726]  INFO  RUN_END      run_id=RUN-00424-A status=OK
+[2026-04-24 09:43:16.024]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00424-A
+[2026-04-24 09:48:53.692]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00426-A operator=auto
+[2026-04-24 09:48:53.849]  INFO  PLATE_LOAD   plate=P-926 barcode=PB0000000926 lane=2
+[2026-04-24 09:48:55.487]  INFO  RACK_PRESENT rack=R-2026 barcode=RB0000002026 lane=2
+[2026-04-24 09:48:55.613]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:49:11.813]  INFO  STEP_END     step=Aspirate duration_ms=16200
+[2026-04-24 09:49:12.082]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:49:26.517]  INFO  STEP_END     step=Dispense duration_ms=14434
+[2026-04-24 09:49:26.668]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:49:47.393]  INFO  STEP_END     step=Mix duration_ms=20724
+[2026-04-24 09:49:47.528]  INFO  RUN_END      run_id=RUN-00426-A status=OK
+[2026-04-24 09:49:47.679]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00426-A
+[2026-04-24 09:52:33.121]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00427-A operator=auto
+[2026-04-24 09:52:33.298]  INFO  PLATE_LOAD   plate=P-927 barcode=PB0000000927 lane=2
+[2026-04-24 09:52:34.881]  INFO  RACK_PRESENT rack=R-2027 barcode=RB0000002027 lane=2
+[2026-04-24 09:52:35.274]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:52:51.297]  INFO  STEP_END     step=Aspirate duration_ms=16022
+[2026-04-24 09:52:51.581]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:53:05.966]  INFO  STEP_END     step=Dispense duration_ms=14385
+[2026-04-24 09:53:06.097]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:53:26.768]  INFO  STEP_END     step=Mix duration_ms=20671
+[2026-04-24 09:53:26.987]  INFO  RUN_END      run_id=RUN-00427-A status=OK
+[2026-04-24 09:53:27.215]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00427-A
+[2026-04-24 09:57:09.657]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00428-A operator=auto
+[2026-04-24 09:57:09.864]  INFO  PLATE_LOAD   plate=P-928 barcode=PB0000000928 lane=2
+[2026-04-24 09:57:11.238]  INFO  RACK_PRESENT rack=R-2028 barcode=RB0000002028 lane=2
+[2026-04-24 09:57:11.533]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 09:57:28.430]  INFO  STEP_END     step=Aspirate duration_ms=16897
+[2026-04-24 09:57:28.723]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 09:57:42.475]  INFO  STEP_END     step=Dispense duration_ms=13751
+[2026-04-24 09:57:42.851]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 09:58:01.383]  INFO  STEP_END     step=Mix duration_ms=18531
+[2026-04-24 09:58:01.572]  INFO  RUN_END      run_id=RUN-00428-A status=OK
+[2026-04-24 09:58:01.752]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00428-A
+[2026-04-24 10:01:55.688]  INFO  RUN_START    method=DilAssay_v3.2 run_id=RUN-00429-A operator=auto
+[2026-04-24 10:01:55.845]  INFO  PLATE_LOAD   plate=P-929 barcode=PB0000000929 lane=2
+[2026-04-24 10:01:57.146]  INFO  RACK_PRESENT rack=R-2029 barcode=RB0000002029 lane=2
+[2026-04-24 10:01:57.319]  INFO  STEP_BEGIN   step=Aspirate
+[2026-04-24 10:02:14.930]  INFO  STEP_END     step=Aspirate duration_ms=17611
+[2026-04-24 10:02:15.059]  INFO  STEP_BEGIN   step=Dispense
+[2026-04-24 10:02:29.184]  INFO  STEP_END     step=Dispense duration_ms=14124
+[2026-04-24 10:02:29.497]  INFO  STEP_BEGIN   step=Mix
+[2026-04-24 10:02:49.726]  INFO  STEP_END     step=Mix duration_ms=20229
+[2026-04-24 10:02:49.860]  INFO  RUN_END      run_id=RUN-00429-A status=OK
+[2026-04-24 10:02:50.109]  INFO  REST_OUT     POST /rover/notify status=PROCESS_OK rover=ROVER_A run_id=RUN-00429-A
